@@ -5,11 +5,13 @@ export default class MyPlugin extends Plugin {
 	views:number;
 	curTrack: number; 
 	totalTracks:number;
+	language:string;
+	accent:string;
 
-	onYouglishAPIReady(){
+	onYouglishAPIReady(str:string){
 		this.widget = new YG.Widget("widget-1", {
 		  width: 640,
-		  components:255	, //search box & caption 
+		  components:255, 
 		  events: {
 			'onFetchDone': this.onFetchDone,
 			'onVideoChange': this.onVideoChange,
@@ -17,7 +19,7 @@ export default class MyPlugin extends Plugin {
 		  }          
 		});
 		// 4. process the query
-		this.widget.fetch("courage","english","us");
+		this.widget.fetch(str,this.language,this.accent);
 	}
 
 	 // 5. The API will call this method when the search is done
@@ -67,7 +69,7 @@ export default class MyPlugin extends Plugin {
 				if (leaf) {
 					if (!checking) {
 						new SampleModal(this.app).open();
-						this.onYouglishAPIReady();
+						this.onYouglishAPIReady("courage");
 						console.log(this)
 					}
 					return true;
@@ -103,8 +105,6 @@ class SampleModal extends Modal {
 	onOpen() {
 		let {contentEl} = this;
 		this.contentEl.innerHTML='<div id="widget-1"></div>'
-		
-
 		console.log(contentEl)
 		
 		
