@@ -1,7 +1,7 @@
 # Youglsih Plugin
 ![](./1.gif)
 
-This is plugin uses [youglish widget](https://youglish.com/developer.jsp). Use YouTube to improve your pronunciation. With more than 50M tracks, YouGlish gives you fast, unbiased answers about how words is spoken by real people and in context. 
+This is plugin uses youglish widget <sup>[1](#myfootnote1)</sup>. Use YouTube to improve your pronunciation. With more than 50M tracks, YouGlish gives you fast, unbiased answers about how words is spoken by real people and in context. 
 
 ## Install
 - If you have previous versions of plugin - remove them
@@ -16,3 +16,6 @@ This is plugin uses [youglish widget](https://youglish.com/developer.jsp). Use Y
 ## How to use
 
 - Select the phrase you want to look for, and click on youglish plugin icon. 
+
+
+<a name="myfootnote1">1</a>: Widget.js [widget](https://youglish.com/developer.jsp)  has been modifed to export YG variable, and to declare two varaibles: W_ACTION and P_ACTION that were not declared.
