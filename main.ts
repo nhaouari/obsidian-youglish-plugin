@@ -23,8 +23,7 @@ export default class YouglishPlugin extends Plugin {
 
 	// 5. The API will call this method when the search is done
 	onFetchDone(event: any) {
-		if (event.totalResult === 0) alert("No result found");
-		else this.totalTracks = event.totalResult;
+		if (event.totalResult !== 0) this.totalTracks = event.totalResult;
 	}
 
 	// 6. The API will call this method when switching to a new video. 

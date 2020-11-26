@@ -1,6 +1,6 @@
 {
     "name": "obsidian-youglish-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Use YouTube to improve your pronunciation. YouGlish gives you fast, unbiased answers about how words is spoken by real people and in context.",
     "main": "main.js",
     "scripts": {
