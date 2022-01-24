@@ -46,7 +46,7 @@ export default class YouglishPlugin extends Plugin {
 		this.addRibbonIcon('languages', 'Youglish Plugin', () => {
 			new SampleModal(this.app).open();
 			let leaf = this.app.workspace.activeLeaf;
-			this.onYouglishAPIReady(leaf.view.currentMode.cmEditor.getSelection());
+			this.onYouglishAPIReady(leaf.view.currentMode.getSelection());
 		});
 
 		this.addCommand({
@@ -60,7 +60,7 @@ export default class YouglishPlugin extends Plugin {
 				if (leaf) {
 					if (!checking) {
 						new SampleModal(this.app).open();
-						this.onYouglishAPIReady(leaf.view.currentMode.cmEditor.getSelection());
+						this.onYouglishAPIReady(leaf.view.currentMode.getSelection());
 						console.log(this)
 					}
 					return true;
